@@ -12,6 +12,11 @@ services:
       POSTGRES_USER: 'directus'
       POSTGRES_PASSWORD: 'directus'
       POSTGRES_DB: 'directus'
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "directus", "-d", "directus", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
 
   cache:
     image: redis:6
