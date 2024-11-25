@@ -47,6 +47,7 @@ services:
 
       # These is helpful for local developement but should probably be removed in production
       CORS_ENABLED: 'true'
+      CORS_ORIGIN: "http://localhost:3000"
       REFRESH_TOKEN_COOKIE_DOMAIN: 'localhost'
       EXTENSIONS_AUTO_RELOAD: 'true'
 
