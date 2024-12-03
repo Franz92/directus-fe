@@ -41,6 +41,10 @@ export default defineNuxtConfig({
 		asyncContext: true, // https://nuxt.com/docs/guide/going-further/experimental-features#asynccontext
 	},
 
+	features:{
+		inlineStyles: false
+	},
+
 	runtimeConfig: {
 		public: {
 			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
@@ -132,6 +136,7 @@ export default defineNuxtConfig({
 
 	build: {
 		transpile: ['v-perfect-signature'],
+		
 	},
 
 	compatibilityDate: '2024-07-28',
